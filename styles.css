@@ -4,6 +4,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -52,22 +53,22 @@ table {
 :root {
     --yellow: #F6D64A;
     --teal: #55BCD5;
-    --purple: #9B26B0
+    --purple: #9B26B0;
     --blue: #499BD2;
-    --dark-gray: #222222
+    --dark-gray: #222222;
     --light-gray: #EAEAEA;
     --white: #FFFFFF;
     --black: #000000;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 h1, h2, h3 {
     font-family: "Molle", cursive;
+    margin: 0 20px;
 }
 
 h4, p, q, small, nav, button, form {
     font-family: "Montserrat", sans-serif;
+    margin: 0 20px;
 }
 
 .sr-only {
@@ -85,6 +86,45 @@ html {
     margin-right: auto;
 }
 
+header {
+  background: linear-gradient(var(--teal), var(--white));
+}
+
+#plan {
+  background-color: var(--yellow);
+}
+
+#plan div {
+  display: block;
+}
+
+#plan section {
+  height: 450px;
+}
+
+#plan div section {
+  display: block;
+  background-color: var(--teal);
+  border: solid 5px;
+  border-color: var(--white);
+  border-radius: 20px;
+  margin: 10px auto;
+  align-content: space-around;
+  width: 450px;
+  height: 350px;
+}
+ 
+#plan div {
+  padding-bottom: 20px;
+}
+
+#plan img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 300px;
+}
+
 #img-grid img {
     display: block;
     width: 600px;
@@ -97,20 +137,203 @@ h1 {
 }
 
 h2 {
-    font-size: 64px;
+    font-size: 60px;
     padding: 5px;
 }
 
 h3 {
-    font-size: 1.17em;
-    padding: 5px;
+    font-size: 48px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+h4  {
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
 }
 
 p {
     padding: 5px;
 }
 
-#skip a {
+#testimonials img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+}
+
+#testimonials p, q {
+  display: block;
+  max-width: 350px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 32px;
+}
+
+q {
+  margin-bottom: 30px;
+  font-style: italic;
+  quotes: "“" "”" "‘" "’";
+}
+q::before {
+    content: open-quote;
+}
+q::after {
+    content: close-quote;
+}
+#about {
+  background-color: var(--blue);
+}
+
+#about div {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 1fr 1fr;
+}
+
+#about img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 200px;
+}
+
+#about p {
+  font-size: 32px;
+  text-align: center;
+}
+
+#contact {
+  margin-bottom: 20px;
+}
+
+#contact label {
+  display: block;
+}
+
+form {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+input[type="text"] {
+	width: 400px;
+  height: 50px;
+  border: solid 5px;
+  border-color: var(--purple);
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+legend {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+input[type="email"] {
+	width: 400px;
+  height: 50px;
+  border: solid 5px;
+  border-color: var(--purple);
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+input[type="tel"] {
+	width: 400px;
+  height: 50px;
+  border: solid 5px;
+  border-color: var(--purple);
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+label {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+input::placeholder{
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  margin-top: 10px;
+  width: 50%;
+}
+
+fieldset {
+  margin: 20px 0;
+}
+
+#contact label {
+  display: inline-flex;
+  width: 220px;
+}
+
+.radio-label {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.radio-input {
+  accent-color: var(--purple);
+}
+
+#prefEmail {
+  height: 50px;
+  width: 50px;
+}
+
+#prefText {
+  height: 50px;
+  width: 50px;
+}
+
+#prefPhone {
+  height: 50px;
+  width: 50px;
+}
+
+
+fieldset label {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.custom-select {
+  width: 400px;
+  height: 50px;
+  border: solid 5px;
+  border-color: var(--purple);
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+input[type="submit"] {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--purple);
+  color: var(--white);
+  border: solid 5px;
+  border-color: var(--purple);
+  width: 410px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+span {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#skip {
     position: absolute;
     left: -10000px;
     top: auto;
@@ -124,3 +347,212 @@ p {
     width: auto;
     height: auto;
 }
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  background-color: var(--light-gray);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#menu-toggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;  
+  z-index: 1;  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+
+#menu-toggle a {
+    text-decoration: none;
+    color: #232323;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+  
+  #menu-toggle a:hover {
+    color: #4f7794;
+  }
+  
+  
+  /* The hamburger button hidden inside an input element */
+  #menu-toggle input {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -7px;
+    left: -5px;  
+    padding: 0;
+    cursor: pointer;  
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */  
+    -webkit-touch-callout: none;
+  }
+  
+  #menu-toggle label {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  #menu-toggle label span {
+    display: none;
+  }
+  
+  /*
+   * Hamburger
+   */
+   #menu-toggle label div {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 6px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;  
+    z-index: 1;  
+    -webkit-transform-origin: 4px 0px;  
+        -ms-transform-origin: 4px 0px;  
+            transform-origin: 4px 0px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  #menu-toggle label div:first-child {
+    -webkit-transform-origin: 0% 100%;
+        -ms-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  
+  #menu-toggle label div:nth-child(2) {
+      -webkit-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  
+  /* 
+   * Change the color of the hamburger when toggled
+   */
+   #menu-toggle input:checked + label div {
+    background: #232323;
+  }
+  
+  /*
+   * Use absolute positioning to place the menu off-screen
+   */
+   #toggle {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    /* Hide the menu off-screen to the left */
+    left: -100%;
+    -webkit-transition: left 0.3s ease;
+    -o-transition: left 0.3s ease;
+    transition: left 0.3s ease; 
+  }
+  
+  #toggle li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+
+
+
+
+  
+  /*
+   * Slide the menu in from left when the input is checked
+   */
+   #menu-toggle input:checked ~ ul {
+    left: 0;
+  }
+
+  :root {
+    --select-border: #777;
+    --select-focus: blue;
+    --select-arrow: var(--select-border);
+  }
+  
+  select {
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+  }
+  
+  .select {
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+  
+
+  
+    min-width: 15ch;
+    max-width: 30ch;
+  
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+  
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+  
+
+  }
+  
+  select:focus + .focus {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 2px solid var(--select-focus);
+    border-radius: inherit;
+  }
+  
