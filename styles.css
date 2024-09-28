@@ -95,9 +95,16 @@ h4, p, q, small, nav, button, form {
 #menu-toggle label:hover {
   background-color: var(--blue);
   color: var(--white);
+  cursor: pointer;
+}
+
+#menu-toggle label:checked {
+  background-color: var(--purple);
 }
 
 #menu-toggle ul {
+  display: none;
+  min-width: 100px;
   list-style-type: none;
   background-color: var(--teal);
   padding: 0;
@@ -121,15 +128,21 @@ h4, p, q, small, nav, button, form {
 #menu-toggle a:hover {
   background-color: var(--white);
   border: none;
-}
-
-#menu-toggle ul {
-  display: none;
-  min-width: 100px;
+  cursor: pointer;
 }
 
 #toggle:checked ~ ul {
   display: block;
+}
+
+#toggle:checked ~ label {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  box-shadow: inset 0 0 8px var(--light-gray)
+}
+
+#toggle:active ~ label {
+  box-shadow: inset 0 0 10px var(--light-gray);
 }
 
 .sr-only {
@@ -282,6 +295,12 @@ form {
 	margin: 0 auto;
 }
 
+.form-required {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
 input[type="text"] {
 	width: 400px;
   height: 50px;
@@ -429,4 +448,242 @@ footer {
 footer a {
   text-decoration: none;
   color: var(--black);
+}
+
+
+
+/*  <----- Medium screen styles start -----> */
+
+
+@media (min-width: 768px) {
+
+  html {
+    min-width: 768px;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 200px auto;
+    padding-top: 50px;
+  }
+
+  #logo {
+    width: 200px;
+  }
+
+  header p {
+    grid-column-start: 2;
+  }
+
+  #menu-toggle label {
+  display: none;
+  }
+
+  #menu-toggle ul {
+    display: inline-flex;
+    list-style-type: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 25px auto;
+    width: 250px;
+    position: static;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #menu-toggle a {
+    color: var(--black);
+    background-color: var(--white);
+    text-decoration: none;
+    padding: 15px;
+    margin: 0 10px;
+    display: block;
+    text-align: center;
+    width: 120px;
+    border: none;
+  }
+
+  #menu-toggle a:hover {
+    background-color: var(--yellow);
+  }
+
+  #img-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 720px;
+    gap: 10px;
+    margin: 20px auto;
+  }
+
+  #img-grid img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 0;
+}
+
+picture {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#plan {
+  padding: 20px 10px;
+}
+
+#plan div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 720px;
+  gap: 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+#plan div section {
+  margin: 0;
+  height: 230px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+#plan h4 {
+  font-size: 1.125em;
+}
+
+#plan img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 60%;
+}
+
+#img-grid img {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+}
+
+#testimonials div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 720px;
+  gap: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+#testimonials img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+}
+
+#testimonials h4 {
+  font-size: 32px;
+}
+
+#testimonials p, q {
+  display: block;
+  max-width: 350px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 28px;
+}
+
+#about {
+  padding: 20px 0;
+}
+
+#about div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+#about img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100px;
+  height: 100px;
+}
+
+#about h4 {
+  font-size: 24px;
+}
+
+#about p {
+  font-size: 20px;
+}
+
+fieldset {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 60px 1fr;
+}
+
+span {
+  margin: 0;
+}
+
+.radio-label {
+  display: inline-flex;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+} 
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  width: 100px;
+}
+
+fieldset label {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.form-required {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+input[type="submit"] {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--purple);
+  color: var(--white);
+  border: solid 5px;
+  border-color: var(--purple);
+  width: 200px;
+  height: 50px;
+  margin-left: 215px;
+}
+
+footer {
+  display: inline-flex;
+  text-align: center;
+  padding: 40px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  background-color: var(--light-gray);
+  width: 768px;
+}
+
+p, a{
+  padding: 0;
+  margin: 0 20px;
+}
+
 }
