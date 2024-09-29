@@ -65,6 +65,7 @@ table {
 
 /*  <----- Mobile styles start -----> */
 
+
 h1, h2, h3 {
     font-family: "Molle", cursive;
     margin: 0 20px;
@@ -665,7 +666,6 @@ input[type="submit"] {
   background-color: var(--purple);
   color: var(--white);
   border: solid 5px;
-  border-color: var(--purple);
   width: 200px;
   height: 50px;
   margin-left: 215px;
@@ -684,6 +684,113 @@ footer {
 p, a{
   padding: 0;
   margin: 0 20px;
+}
+}
+
+
+
+/*  <----- Large screen styles start -----> */
+
+
+@media (min-width: 1024px) {
+
+  html {
+    min-width: 1280px;
+  }
+
+  #intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    height: 560px;
+    margin: 0 40px;
+}
+
+  #intro p {
+    grid-row-start: 2;
+  } 
+
+  #plan div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 0;
+    max-width: 1280px;
+}
+
+#plan div section {
+  margin: 0;
+  height: 200px;
+  width: 250px;
+  margin: 0 auto;
+  padding-bottom: 0;
+}
+
+#plan img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 60%;
+  max-width: 100px;
+}
+
+  #testimonials div {
+    display: inline-flex;
+    max-width: 1280px;
+    gap: 50px;
+    margin: 20px 0;
+  }
+  
+  #testimonials {
+      width: 1280px;
+  }
+
+  #testimonials img {
+    height: 175px;
+  }
+
+  #testimonials h4 {
+    font-size: 24px;
+  }
+
+  #testimonials q {
+    font-size: 20px;
+  }
+
+  form {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    width: 1280px;
+    margin-left: 0;
+}
+
+#names {
+  padding-top: 17px;
+}
+
+#nums {
+  margin-left: 10px;
+  margin-right: -25px;
+}
+
+#selects {
+  padding-top: 4px;
+}
+
+  footer {
+    width: 1280px;
+}
+
+footer a {
+  float: right;
+  width: 200px;
+}
+
+footer p {
+  width: 900px;
+  text-align: initial;
 }
 
 }
